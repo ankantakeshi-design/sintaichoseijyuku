@@ -186,6 +186,12 @@
     margin-top:56px; text-align:center; font-size:13px; color:#8a7f72; font-weight:500;
   }
   footer .fname { font-weight:900; color:#2B2B2B; font-size:15px; }
+
+.modebar { text-align:center; padding:20px 16px 6px; }
+.modebar-lead { font-size:14px; color:#6B5D4F; margin:0 0 10px; line-height:1.7; }
+.modebtn { font-family:inherit; font-size:16px; font-weight:700; padding:10px 24px; border-radius:999px; border:2px solid #E4572E; background:#FFFFFF; color:#E4572E; cursor:pointer; margin:0 4px; }
+.modebtn.on { background:#E4572E; color:#FFFFFF; }
+body.textmode .illust, body.textmode .pimg, body.textmode .vsteps img, body.textmode .wheel-img, body.textmode .cimg, body.textmode .prof-img, body.textmode .qimg, body.textmode img[src="chara-takechan.png"] { display:none !important; }
 </style>
 </head>
 <body>
@@ -195,6 +201,11 @@
     <img class="mark" src="kasui-icon.png" alt="火水マーク">
     <div class="name">心体調整塾<small>火水性質分析 × パートナーシップ</small></div>
   </header>
+<div class="modebar">
+<p class="modebar-lead">絵が多い方が読みやすい方も、文字だけの方が読みやすい方もいます。<br>お好きな読み方を選んでください。</p>
+<button type="button" id="btn-visual" class="modebtn on">絵で読む</button><button type="button" id="btn-text" class="modebtn">文字で読む</button>
+</div>
+
 
   <div class="hero">
     <img class="mark-big" src="kasui-icon.png" alt="火と水のマーク">
@@ -437,5 +448,22 @@
   </footer>
 
 </div>
+
+<script>
+(function(){
+  var KEY = 'kasui-read-mode';
+  function apply(mode){
+    document.body.classList.toggle('textmode', mode === 'text');
+    document.getElementById('btn-visual').classList.toggle('on', mode !== 'text');
+    document.getElementById('btn-text').classList.toggle('on', mode === 'text');
+    try { localStorage.setItem(KEY, mode); } catch(e) {}
+  }
+  var saved = 'visual';
+  try { saved = localStorage.getItem(KEY) || 'visual'; } catch(e) {}
+  document.getElementById('btn-visual').addEventListener('click', function(){ apply('visual'); });
+  document.getElementById('btn-text').addEventListener('click', function(){ apply('text'); });
+  apply(saved);
+})();
+</script>
 </body>
 </html>
