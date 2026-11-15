@@ -41,7 +41,7 @@
 
   /* Header */
   header.top {
-    display:flex; align-items:center; gap:10px;
+    display:flex; align-items:center; justify-content:center; text-align:center;
     padding:18px 4px 6px;
   }
   header.top img.mark { width:44px; height:44px; border-radius:50%; }
@@ -49,18 +49,19 @@
   header.top .name small { display:block; font-size:11px; font-weight:700; color:#8a7f72; letter-spacing:.08em; }
 
   /* Hero */
-  .hero { text-align:center; padding:28px 0 8px; }
+  .hero { text-align:center; padding:20px 0 8px; }
   .hero img.mark-big {
-    width:150px; height:150px; border-radius:50%;
+    display:block; margin:0 auto;
+    width:138px; height:138px; border-radius:50%;
     box-shadow:0 10px 30px rgba(255,110,64,.18), 0 10px 30px rgba(43,108,176,.12);
   }
   .hero .pill {
-    display:inline-block; margin-top:22px; padding:4px 16px;
+    display:inline-block; margin-top:16px; padding:4px 16px;
     background:#FFF1E6; color:#E8590C; border-radius:999px;
     font-size:13px; font-weight:700;
   }
   .hero h1 {
-    margin-top:14px; font-size:32px; font-weight:900; line-height:1.45;
+    margin-top:18px; font-size:32px; font-weight:900; line-height:1.45;
   }
   .hero h1 .fire { color:#F0502E; }
   .hero h1 .water { color:#2B6CB0; }
@@ -147,6 +148,8 @@
   .profile {
     margin-top:20px; background:#FFF8F1; border-radius:20px; padding:24px 20px;
   }
+
+  .profile img.face-mini { display:block; width:76px; height:76px; border-radius:50%; margin:2px auto 8px; object-fit:cover; }
   .profile h3 { font-size:18px; font-weight:900; text-align:center; }
 
   .profile img.prof-img { display:block; width:100%; max-width:400px; margin:14px auto; height:auto; }
@@ -192,13 +195,11 @@
 <div class="wrap">
 
   <header class="top">
-    <img class="mark" src="kasui-icon.png" alt="火水マーク">
     <div class="name">心体調整塾<small>火水性質分析 × パートナーシップ</small></div>
   </header>
 
   <div class="hero">
     <img class="mark-big" src="kasui-icon.png" alt="火と水のマーク">
-    <span class="pill">🔥 火水性質分析 ☔</span>
     <h1>夫婦のすれ違いは、<br>性格じゃなく<span class="fire">「性質」</span>の<span class="water">ちがい</span></h1>
     <p class="lead">真逆の性質の夫婦が、結婚15年かけて<br>実践・研究してきた「火水性質分析」です。</p>
     <a class="cta-main" href="https://kamisindan.pages.dev/">🔥☔ 無料・火水性質診断<small>30の質問・約3分・登録不要</small></a>
@@ -373,6 +374,7 @@
   <section class="block">
     <h2>たけちゃんについて</h2>
     <div class="profile">
+      <img class="face-mini" src="face-icon.jpg" alt="たけちゃん">
       <h3>心体調整塾 たけちゃん</h3>
       <div style="text-align:center; margin-top:14px;">
         <img src="chara-takechan.png" alt="カリスマ太陽リーダー" style="width:200px; max-width:60%; border-radius:18px;">
