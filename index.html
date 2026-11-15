@@ -41,7 +41,7 @@
 
   /* Header */
   header.top {
-    display:flex; align-items:center; gap:10px;
+    display:flex; align-items:center; justify-content:center; text-align:center;
     padding:18px 4px 6px;
   }
   header.top img.mark { width:44px; height:44px; border-radius:50%; }
@@ -49,18 +49,19 @@
   header.top .name small { display:block; font-size:11px; font-weight:700; color:#8a7f72; letter-spacing:.08em; }
 
   /* Hero */
-  .hero { text-align:center; padding:28px 0 8px; }
+  .hero { text-align:center; padding:20px 0 8px; }
   .hero img.mark-big {
-    width:150px; height:150px; border-radius:50%;
+    display:block; margin:0 auto;
+    width:138px; height:138px; border-radius:50%;
     box-shadow:0 10px 30px rgba(255,110,64,.18), 0 10px 30px rgba(43,108,176,.12);
   }
   .hero .pill {
-    display:inline-block; margin-top:22px; padding:4px 16px;
+    display:inline-block; margin-top:16px; padding:4px 16px;
     background:#FFF1E6; color:#E8590C; border-radius:999px;
     font-size:13px; font-weight:700;
   }
   .hero h1 {
-    margin-top:14px; font-size:32px; font-weight:900; line-height:1.45;
+    margin-top:12px; font-size:32px; font-weight:900; line-height:1.45;
   }
   .hero h1 .fire { color:#F0502E; }
   .hero h1 .water { color:#2B6CB0; }
@@ -186,26 +187,14 @@
     margin-top:56px; text-align:center; font-size:13px; color:#8a7f72; font-weight:500;
   }
   footer .fname { font-weight:900; color:#2B2B2B; font-size:15px; }
-
-.modebar { text-align:center; padding:20px 16px 6px; }
-.modebar-lead { font-size:14px; color:#6B5D4F; margin:0 0 10px; line-height:1.7; }
-.modebtn { font-family:inherit; font-size:16px; font-weight:700; padding:10px 24px; border-radius:999px; border:2px solid #E4572E; background:#FFFFFF; color:#E4572E; cursor:pointer; margin:0 4px; }
-.modebtn.on { background:#E4572E; color:#FFFFFF; }
-body.textmode .illust, body.textmode .pimg, body.textmode .vsteps img, body.textmode .wheel-img, body.textmode .cimg, body.textmode .prof-img, body.textmode .qimg, body.textmode img[src="chara-takechan.png"] { display:none !important; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header class="top">
-    <img class="mark" src="kasui-icon.png" alt="火水マーク">
     <div class="name">心体調整塾<small>火水性質分析 × パートナーシップ</small></div>
   </header>
-<div class="modebar">
-<p class="modebar-lead">絵が多い方が読みやすい方も、文字だけの方が読みやすい方もいます。<br>お好きな読み方を選んでください。</p>
-<button type="button" id="btn-visual" class="modebtn on">絵で読む</button><button type="button" id="btn-text" class="modebtn">文字で読む</button>
-</div>
-
 
   <div class="hero">
     <img class="mark-big" src="kasui-icon.png" alt="火と水のマーク">
@@ -448,22 +437,5 @@ body.textmode .illust, body.textmode .pimg, body.textmode .vsteps img, body.text
   </footer>
 
 </div>
-
-<script>
-(function(){
-  var KEY = 'kasui-read-mode';
-  function apply(mode){
-    document.body.classList.toggle('textmode', mode === 'text');
-    document.getElementById('btn-visual').classList.toggle('on', mode !== 'text');
-    document.getElementById('btn-text').classList.toggle('on', mode === 'text');
-    try { localStorage.setItem(KEY, mode); } catch(e) {}
-  }
-  var saved = 'visual';
-  try { saved = localStorage.getItem(KEY) || 'visual'; } catch(e) {}
-  document.getElementById('btn-visual').addEventListener('click', function(){ apply('visual'); });
-  document.getElementById('btn-text').addEventListener('click', function(){ apply('text'); });
-  apply(saved);
-})();
-</script>
 </body>
 </html>
