@@ -206,6 +206,18 @@
   }
   footer .fname { font-weight:900; color:#2B2B2B; font-size:15px; }
 </style>
+<style>
+/* FAQ（よくある質問） */
+.faq-sec{margin:48px auto 0;text-align:left;}
+.faq-sec>h2{font-size:14px;font-weight:700;letter-spacing:.1em;text-align:center;margin:0 0 10px;color:#7A6C5E;}
+.faq-item{border-top:1px solid #EAE2D8;}
+.faq-item:last-child{border-bottom:1px solid #EAE2D8;}
+.faq-item summary{cursor:pointer;list-style:none;padding:15px 26px 15px 4px;font-size:15px;font-weight:700;line-height:1.6;position:relative;color:#2B2B2B;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"＋";position:absolute;right:6px;top:15px;font-size:13px;color:#7A6C5E;font-weight:400;}
+.faq-item[open ] summary::after{content:"−";}
+.faq-a{padding:2px 4px 18px;font-size:15px;line-height:1.9;color:#2B2B2B;}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -519,12 +531,77 @@
     </div>
   </section>
 
-  <footer>
+    <section class="faq-sec" aria-label="よくある質問">
+  <h2>よくある質問</h2>
+  <details class="faq-item"><summary>心体調整塾は、どんなところですか？</summary><div class="faq-a">夫婦のすれ違いを「性格」ではなく「性質」のちがいから読み解く、心と体の研究と発信の場です。真逆の性質の夫婦が、結婚15年かけて実践・研究してきた「火水性質分析」をもとに、noteやSNSでの発信、診断や絵本などの無料コンテンツを作っています。</div></details>
+  <details class="faq-item"><summary>火水性質分析とは、何ですか？</summary><div class="faq-a">人の中にある「火（考える・決める・進む力）」と「水（感じる・察する・受け取る力）」の性質から、すれ違いを読み解く考え方です。火と水はもとは同じもので、一人の中に両方あり、時期によって表に出る側が変わります。偏りの根っこは「恐れ」、回復は「安心」と考えています。</div></details>
+  <details class="faq-item"><summary>診断は無料ですか？</summary><div class="faq-a">無料です。火水性質診断は、30の質問・約3分・登録不要で、あなたの火と水の割合と成熟度、12タイプのうちのタイプが分かります。パートナーと受け比べると、すれ違いの理由が見えてきます。</div></details>
+  <details class="faq-item"><summary>相談はできますか？</summary><div class="faq-a">水女子のための火育て塾で、無料相談の質問を受け付けています。個人セッションの形ではなく、寄せられた中から選んで、Threadsやnoteで公開でお答えする形です。匿名で送れて、メールアドレスの収集もありません。</div></details>
+  <details class="faq-item"><summary>何から始めるのがおすすめですか？</summary><div class="faq-a">まずは絵本『ひーくんと みーちゃん』（無料）か、火水性質診断（無料）がおすすめです。物語で感じてから、診断で自分の性質を知ると、すれ違いの見え方が変わります。もっとくわしく知りたい方は、このページから進める「火水性質診断の全体像（中心の記事）」をどうぞ。</div></details>
+  <details class="faq-item"><summary>たけちゃんは、どんな人ですか？</summary><div class="faq-a">心体調整塾のたけちゃんです。食品工場の製造技術者、心と体の整体の研究、土木設備（ダム・河川）の技術者を経て、今は夫婦15年の研究をもとに発信しています。火の性質が強く、言葉で考えるのが得意な分、感じることが苦手だった僕が、水の強い妻との会話の中で学んできたことを書いています。</div></details>
+  </section>
+<footer>
     <div class="fname">心体調整塾</div>
     火水性質分析 × パートナーシップ<br>
     © 心体調整塾 たけちゃん
   </footer>
 
 </div>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "心体調整塾は、どんなところですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "夫婦のすれ違いを「性格」ではなく「性質」のちがいから読み解く、心と体の研究と発信の場です。真逆の性質の夫婦が、結婚15年かけて実践・研究してきた「火水性質分析」をもとに、noteやSNSでの発信、診断や絵本などの無料コンテンツを作っています。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "火水性質分析とは、何ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "人の中にある「火（考える・決める・進む力）」と「水（感じる・察する・受け取る力）」の性質から、すれ違いを読み解く考え方です。火と水はもとは同じもので、一人の中に両方あり、時期によって表に出る側が変わります。偏りの根っこは「恐れ」、回復は「安心」と考えています。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "診断は無料ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "無料です。火水性質診断は、30の質問・約3分・登録不要で、あなたの火と水の割合と成熟度、12タイプのうちのタイプが分かります。パートナーと受け比べると、すれ違いの理由が見えてきます。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "相談はできますか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "水女子のための火育て塾で、無料相談の質問を受け付けています。個人セッションの形ではなく、寄せられた中から選んで、Threadsやnoteで公開でお答えする形です。匿名で送れて、メールアドレスの収集もありません。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "何から始めるのがおすすめですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "まずは絵本『ひーくんと みーちゃん』（無料）か、火水性質診断（無料）がおすすめです。物語で感じてから、診断で自分の性質を知ると、すれ違いの見え方が変わります。もっとくわしく知りたい方は、このページから進める「火水性質診断の全体像（中心の記事）」をどうぞ。"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "たけちゃんは、どんな人ですか？",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "心体調整塾のたけちゃんです。食品工場の製造技術者、心と体の整体の研究、土木設備（ダム・河川）の技術者を経て、今は夫婦15年の研究をもとに発信しています。火の性質が強く、言葉で考えるのが得意な分、感じることが苦手だった僕が、水の強い妻との会話の中で学んできたことを書いています。"
+   }
+  }
+ ]
+}
+</script>
 </body>
 </html>
