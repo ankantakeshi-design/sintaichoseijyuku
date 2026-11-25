@@ -211,6 +211,17 @@
     margin-top:56px; text-align:center; font-size:13px; color:#7A6C5E; font-weight:500;
   }
   footer .fname { font-weight:900; color:#2B2B2B; font-size:15px; }
+
+  .read-fold{ border:2px solid #EAD9C2; border-radius:16px; background:#FFFDF8; overflow:hidden; }
+  .read-fold summary{
+    list-style:none; cursor:pointer; min-height:56px;
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    padding:12px 16px; font-size:17px; font-weight:900; color:#4A2F14;
+  }
+  .read-fold summary::-webkit-details-marker{ display:none; }
+  .read-fold summary .chev{ font-size:14px; color:#B07B2A; transition:transform .2s ease; }
+  .read-fold[open ] summary .chev{ transform:rotate(180deg); }
+  .read-fold .fold-body{ padding:4px 12px 14px; }
 </style>
 <style>
 /* FAQ（よくある質問） */
@@ -502,6 +513,7 @@
   <section class="block">
     <h2>読みもの（note）</h2>
     <p class="sub">記事は、1冊の本に向けて積み上げています</p>
+    <details class="read-fold"><summary>読みものを見る<span class="chev">▽</span></summary><div class="fold-body">
     <div class="cards">
       <a class="card" href="https://note.com/takekasui/m/mf51a68ec55fb">
         <img class="cimg" src="card-04-series.webp" alt="積み上がったシリーズの本" loading="lazy" width="640" height="428">
@@ -532,6 +544,7 @@
         <div class="go">入門マガジンを開く →</div>
       </a>
     </div>
+    </div></details>
   </section>
 
   <section class="block">
